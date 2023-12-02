@@ -9,7 +9,6 @@ function App() {
 
   const [selection, setSelection] = React.useState([]);
   const deleteSelected = () => {
-    console.log({ selection });
     setRows(rows.filter((row) => !selection.includes(row.id)));
   };
   useEffect(() => {
@@ -23,9 +22,6 @@ function App() {
       });
   }, []);
 
-  useEffect(() => {
-    console.log("Rows Changed...");
-  }, [rows]);
   return (
     <div style={{ height: "screen", padding: "20px" }}>
       <p style={{ fontSize: "30px", fontWeight: "bold", textAlign: "center" }}>

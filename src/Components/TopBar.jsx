@@ -5,9 +5,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 const TopBar = ({ rows, setRows, allRows, deleteSelected }) => {
   const [searchString, setSearchString] = React.useState("");
   useEffect(() => {
-    console.log("searchString: ", searchString);
     const delayTimer = setTimeout(() => {
-      if (searchString.length >= 4) {
+      if (searchString.length >= 3) {
         const filtered = rows.filter((row) => {
           const nameMatch = row.name
             .toLowerCase()

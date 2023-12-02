@@ -171,7 +171,6 @@ const AdminTable = ({ rows, setRows, selection, setSelection }) => {
         onRowModesModelChange={handleRowModesModelChange}
         onRowEditStop={handleRowEditStop}
         onRowSelectionModelChange={(newSelection) => {
-          console.log("newSelection: ", newSelection);
           setSelection(newSelection);
         }}
         processRowUpdate={processRowUpdate}
